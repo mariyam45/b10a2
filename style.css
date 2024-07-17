@@ -24,7 +24,7 @@
   --text-color: #ffffff;
   --big-font: 4rem;
   --md-font: 3rem;
-  --sm-font: 0.8rem;
+  --sm-font: 0.9rem;
   --btn-text: 1rem;
 }
 
@@ -38,6 +38,9 @@ a {
 }
 p {
   font-size: var(--sm-font);
+  font-weight: 200;
+  opacity: 50%;
+  line-height: 1.5rem;
 }
 h1 {
   font-size: var(--big-font);
@@ -45,15 +48,19 @@ h1 {
 h3 {
   font-size: var(--md-font);
 }
+
 /* -------nav------- */
 nav {
+  background: #111111a2;
+  position: sticky;
+  top: 10px;
+  backdrop-filter: blur(10px);
+}
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
-  position: sticky;
-  top: 10px;
-  /* background: white; */
 }
 
 .menus li {
@@ -81,41 +88,85 @@ nav #menu_icon {
   font-style: italic;
   color: var(--btn-color);
 }
-/* .dropdown {
-  position: absolute;
-  right: 2rem;
-  top: 6rem;
-  height: 0;
-  width: 160px;
-  background: #4141416b;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 1rem 0;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.dropdown .open {
-  height: 240px;
-}
-.dropdown li {
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 /* --------header---------- */
 .header {
-  /* border-top: 1px solid red; */
-  /* position: relative; */
   color: var(--text-color);
-  background: linear-gradient(#111111, #a1a1a111, #77777711, #111111);
+  background: linear-gradient(#41414111, #77777711, #111111);
   height: 100vh;
+}
+.hero1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  margin-bottom: 1.6rem;
 }
 .header_text span {
   font-family: "Dancing Script", cursive;
 }
+.header_img img {
+  width: 85%;
+  /* position: relative; */
+}
 
+.header_btns {
+  margin: 1.6rem 0;
+}
+.header_btns button {
+  padding: 1rem 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 6rem;
+  background: var(--btn-color);
+  border: none;
+}
+.header_btns button:hover {
+  background: none;
+  border: 2px solid #ffffff;
+}
+.tag {
+  background: #ffffff15;
+  padding: 1rem;
+
+  /* right: 11rem; */
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+.tag1 {
+  position: absolute;
+  right: 8rem;
+  top: 12rem;
+}
+.tag1 h4 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+.tag2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 26rem;
+  bottom: 2rem;
+}
+.tag2 h5 {
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.tag small {
+  opacity: 50%;
+  font-weight: 300;
+}
+.circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background: var(--btn-color);
+  margin-right: 1rem;
+}
 /* ----------------------------------Responsive_------------------------------------ */
 @media (max-width: 578px) {
   .menus {
@@ -123,5 +174,22 @@ nav #menu_icon {
   }
   nav #menu_icon {
     display: block;
+  }
+
+  /* header  */
+  .hero1 {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: var(--md-font);
+    margin-top: 2rem;
+  }
+  .tag1 {
+    top: 37rem;
+    right: 5rem;
+  }
+  .tag2 {
+    left: 3rem;
+    width: 11rem;
   }
 }
